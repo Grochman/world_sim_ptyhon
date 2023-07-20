@@ -47,7 +47,7 @@ class World:
                                             height=self.__window_height * 3 / 4)
             self.__legenda_panel.grid(row=0, column=0)
             data = [("Antelope", "brown"), ("CyberSheep", "#3bfff2"), ("Dandelion", "yellow"), ("Fox", "orange"), ("Grass", "#19e34f"),
-                    ("Guarana", "#ff5eea"), ("Human", "black"), ("Nightshade", "blue"), ("PineBrost", "red"), ("Sheep", "white"),
+                    ("Guarana", "#ff5eea"), ("Human", "black"), ("Nightshade", "blue"), ("Pine Borscht", "red"), ("Sheep", "white"),
                     ("Turtle", "green"), ("Wolf", "#363636")]
             for index, (label_text, color) in enumerate(data):
                 label = tk.Label(self.__legenda_panel, text=label_text)
