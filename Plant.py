@@ -1,6 +1,7 @@
 from Organism import Organism
 import random
 
+
 class Plant(Organism):
 
     def __init__(self, x, y, strength, iniciative, color):
@@ -8,7 +9,7 @@ class Plant(Organism):
         super().__init__(x, y, strength, iniciative, color)
 
     def action(self):
-        spred_chance = random.randint(0,10)
+        spred_chance = random.randint(0, 10)
 
         if spred_chance == 0:
             self.seeds += 1

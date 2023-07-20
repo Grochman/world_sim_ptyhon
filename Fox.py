@@ -27,4 +27,3 @@ class Fox(Animal):
             self.y += self.world.box_size
         elif move_dir == 3 and self.y > 0 and up:
             self.y -= self.world.box_size
-

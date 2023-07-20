@@ -143,7 +143,7 @@ class World:
                         if self.__animals_mated(org):
                             message = " mated with "
                         else:
-                            message = " tryed to mate with "
+                            message = " tried to mate with "
 
                     self.__logs.append(tk.Label(self.__logs_panel, text=cords + type(org).__name__ + message + type(other).__name__))
 

@@ -36,4 +36,3 @@ class Animal(Organism):
             return 0
         else:
             return 1
-

@@ -23,13 +23,11 @@ class Turtle(Animal):
         elif move_dir == 3 and self.y > 0:
             self.y -= self.world.box_size
 
-
     def colision(self, other):
         if type(other) == type(self):
             other.x = other.prev_x
             other.y = other.prev_y
             return 4
-
 
         if other.strength < 5:  # i jst animal
             other.x = other.prev_x
