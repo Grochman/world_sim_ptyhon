@@ -306,7 +306,7 @@ class World:
                    tk.Radiobutton(popup, text="Guarana", variable=selected_value, value="Guarana"),
                    tk.Radiobutton(popup, text="Human", variable=selected_value, value="Human"),
                    tk.Radiobutton(popup, text="Nightshade", variable=selected_value, value="Nightshade"),
-                   tk.Radiobutton(popup, text="PineBrost", variable=selected_value, value="PineBrost"),
+                   tk.Radiobutton(popup, text="Pine Borscht", variable=selected_value, value="PineBrost"),
                    tk.Radiobutton(popup, text="Sheep", variable=selected_value, value="Sheep"),
                    tk.Radiobutton(popup, text="Turtle", variable=selected_value, value="Turtle"),
                    tk.Radiobutton(popup, text="Wolf", variable=selected_value, value="Wolf")]
