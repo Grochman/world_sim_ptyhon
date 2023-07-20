@@ -3,7 +3,7 @@ from World import World
 
 def main():
     world = World.get_instance()
-    # world.populate()
+    world.populate()
     world.run()
 
 

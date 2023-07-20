@@ -5,11 +5,11 @@ import World
 
 class Organism(ABC):
 
-    def __init__(self, x, y, strength, iniciative, color):
+    def __init__(self, x, y, strength, initiative, color):
         self.x = x
         self.y = y
         self.strength = strength
-        self.iniciative = iniciative
+        self.initiative = initiative
         self.world = World.World.get_instance()
         self.color = color
         self.sprite = self.world.make_sprite(x, y, color)
@@ -18,7 +18,7 @@ class Organism(ABC):
     def action(self):
         pass
 
-    def colision(self, other):
+    def collision(self, other):
         if self.strength > other.strength:
             return 0
         else:

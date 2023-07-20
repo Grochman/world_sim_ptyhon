@@ -13,7 +13,7 @@ class PineBrost(Plant):
         self.world.kill(self.x, self.y-self.world.box_size)
         self.world.kill(self.x, self.y+self.world.box_size)
 
-    def colision(self, other):
+    def collision(self, other):
         self.world.pine.remove(self)
         if isinstance(other, CyberSheep):
             return 1

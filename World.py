@@ -16,7 +16,7 @@ from Grass import Grass
 from Dandelion import Dandelion
 from Guarana import Guarana
 from Nightshade import Nightshade
-from PineBrost import PineBrost
+from PineBorscht import PineBrost
 from CyberSheep import CyberSheep
 
 
@@ -116,7 +116,7 @@ class World:
             for other in self.__organisms.copy():
                 if other.x == org.x and other.y == org.y and not (other is org):
                     org_s_flag = True
-                    result = other.colision(org)
+                    result = other.collision(org)
                     cords = str(org.x) + " " + str(org.y) + " "
                     message = " "
                     if result == 0:
@@ -151,7 +151,7 @@ class World:
             self.__logs[i].grid(row=i, column=0)
 
         if org_s_flag:
-            self.__organisms.sort(key=lambda organ: organ.iniciative, reverse=True)
+            self.__organisms.sort(key=lambda organ: organ.initiative, reverse=True)
         self.__draw()
 
     def populate(self):
@@ -190,7 +190,7 @@ class World:
                 y += 1
             x += 1
 
-        self.__organisms.sort(key=lambda org: org.iniciative, reverse=True)
+        self.__organisms.sort(key=lambda org: org.initiative, reverse=True)
         for org in self.__organisms:
             org.action()
 
@@ -264,7 +264,7 @@ class World:
 
         if self.is_empty(x, y):
             self.__organisms.append(type(org)(x, y))
-            # self.__organisms.sort(key=lambda organ: organ.iniciative, reverse=True)
+            # self.__organisms.sort(key=lambda organ: organ.initiative, reverse=True)
 
     def save(self):
         with open('objects.bin', 'wb') as file:
@@ -285,7 +285,7 @@ class World:
                 self.__organisms.append(globals()[org_type](0, 0))
                 self.__organisms[-1].load(file)
                 length -= 1
-            self.__organisms.sort(key=lambda organism: organism.iniciative, reverse=True)
+            self.__organisms.sort(key=lambda organism: organism.initiative, reverse=True)
 
         self.__draw()
 
@@ -306,7 +306,7 @@ class World:
                    tk.Radiobutton(popup, text="Guarana", variable=selected_value, value="Guarana"),
                    tk.Radiobutton(popup, text="Human", variable=selected_value, value="Human"),
                    tk.Radiobutton(popup, text="Nightshade", variable=selected_value, value="Nightshade"),
-                   tk.Radiobutton(popup, text="Pine Borscht", variable=selected_value, value="PineBrost"),
+                   tk.Radiobutton(popup, text="Pine Borscht", variable=selected_value, value="PineBorscht"),
                    tk.Radiobutton(popup, text="Sheep", variable=selected_value, value="Sheep"),
                    tk.Radiobutton(popup, text="Turtle", variable=selected_value, value="Turtle"),
                    tk.Radiobutton(popup, text="Wolf", variable=selected_value, value="Wolf")]
@@ -315,7 +315,7 @@ class World:
             selected_option = selected_value.get()
             if self.is_empty(x, y):
                 self.__organisms.append(globals()[selected_option](x, y))
-                self.__organisms.sort(key=lambda organ: organ.iniciative, reverse=True)
+                self.__organisms.sort(key=lambda organ: organ.initiative, reverse=True)
             popup.destroy()
 
         # Create a button to trigger the selection

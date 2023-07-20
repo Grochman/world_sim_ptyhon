@@ -7,8 +7,8 @@ class Dandelion(Plant):
         super().__init__(x, y, 0, 0, "yellow")
 
     def action(self):
-        spred_chance = random.randint(0, 10)
+        spread_chance = random.randint(0, 10)
 
         for i in range(3):
-            if spred_chance == 0:
+            if spread_chance == 0:
                 self.seeds += 1

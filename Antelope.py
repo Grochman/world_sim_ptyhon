@@ -22,7 +22,7 @@ class Antelope(Animal):
         elif self.y > self.world.box_size:
             self.y -= self.world.box_size*2
 
-    def colision(self, other):
+    def collision(self, other):
         if type(other) == type(self):
             other.x = other.prev_x
             other.y = other.prev_y

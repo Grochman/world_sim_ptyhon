@@ -4,11 +4,11 @@ import random
 
 class Animal(Organism):
 
-    def __init__(self, x, y, strength, iniciative, color):
+    def __init__(self, x, y, strength, initiative, color):
         self.new = True
         self.prev_x = x
         self.prev_y = y
-        super().__init__(x, y, strength, iniciative, color)
+        super().__init__(x, y, strength, initiative, color)
 
     def action(self):
         if self.new:
@@ -26,7 +26,7 @@ class Animal(Organism):
         elif self.y > 0:
             self.y -= self.world.box_size
 
-    def colision(self, other):
+    def collision(self, other):
         if type(other) == type(self):
             other.x = other.prev_x
             other.y = other.prev_y
