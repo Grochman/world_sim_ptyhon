@@ -220,7 +220,7 @@ class World:
     def kill(self, x, y):
         for org in self.__organisms:
             if org.x == x and org.y == y and isinstance(org, Animal) and not isinstance(org, CyberSheep):
-                self.__logs.append(tk.Label(self.__logs_panel, text=str(org.x) + " " + str(org.y) + " " + type(org).__name__ + " got too close to barszcz "))
+                self.__logs.append(tk.Label(self.__logs_panel, text=str(org.x) + " " + str(org.y) + " " + type(org).__name__ + " got too close to pine borscht "))
                 self.__sym_panel.delete(org.sprite)
                 self.__organisms.remove(org)
 
