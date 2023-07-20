@@ -3,21 +3,21 @@ import random
 import pickle
 import tkinter as tk
 
-from Plant import Plant
-from Animal import Animal
+from Plants.Plant import Plant
+from Animals.Animal import Animal
 
-from Sheep import Sheep
-from Wolf import Wolf
-from Fox import Fox
-from Antelope import Antelope
-from Turtle import Turtle
-from Human import Human
-from Grass import Grass
-from Dandelion import Dandelion
-from Guarana import Guarana
-from Nightshade import Nightshade
-from PineBorscht import PineBrost
-from CyberSheep import CyberSheep
+from Animals.Sheep import Sheep
+from Animals.Wolf import Wolf
+from Animals.Fox import Fox
+from Animals.Antelope import Antelope
+from Animals.Turtle import Turtle
+from Animals.Human import Human
+from Plants.Grass import Grass
+from Plants.Dandelion import Dandelion
+from Plants.Guarana import Guarana
+from Plants.Nightshade import Nightshade
+from Plants.PineBorscht import PineBorscht
+from Animals.CyberSheep import CyberSheep
 
 
 class World:
@@ -181,7 +181,7 @@ class World:
             elif n == 8:
                 self.__organisms.append(Dandelion(x * self.box_size, y * self.box_size))
             elif n == 9:
-                self.__organisms.append(PineBrost(x * self.box_size, y * self.box_size))
+                self.__organisms.append(PineBorscht(x * self.box_size, y * self.box_size))
             elif n == 10:
                 self.__organisms.append(CyberSheep(x * self.box_size, y * self.box_size))
 

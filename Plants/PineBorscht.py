@@ -1,8 +1,8 @@
-from Plant import Plant
-from CyberSheep import CyberSheep
+from Plants.Plant import Plant
+from Animals.CyberSheep import CyberSheep
 
 
-class PineBrost(Plant):
+class PineBorscht(Plant):
     def __init__(self, x, y):
         super().__init__(x, y, 10, 0, "red")
         self.world.pine.append(self)

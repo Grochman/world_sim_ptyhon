@@ -1,4 +1,4 @@
-from Animal import Animal
+from Animals.Animal import Animal
 
 
 class CyberSheep(Animal):

@@ -1,4 +1,4 @@
-from Plant import Plant
+from Plants.Plant import Plant
 
 
 class Guarana(Plant):
